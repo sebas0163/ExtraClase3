@@ -1,5 +1,5 @@
 
-package listas;
+package com.example.ordenamiento;
 
 /**
  * Clase para crear una lista enlazada 

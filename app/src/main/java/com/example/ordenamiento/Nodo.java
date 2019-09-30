@@ -1,4 +1,4 @@
-package listas;
+package com.example.ordenamiento;
 
 /**
  * @author Erick
