@@ -40,12 +40,4 @@ public class BubbleSort {
       System.out.print("Se realizaron "+ swaps+" swaps");
       System.out.print("Se realizaron "+ comp+" comparaciones");
    }
-
-   public static void main(String[] args) {
-      // TestBubbleSort
-      BubbleSort b = new BubbleSort();
-      int[] num = {5,4,3,2,1};
-      b.bubbleSort(num);
-      b.printArray(num);   
-   }
 }

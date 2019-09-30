@@ -26,5 +26,20 @@ public class MainActivity extends AppCompatActivity {
     public void reset(View view){
         lista = new DoubleEndedLinkedList<>();
     }
-
+    public void bubble(View view){
+        BubbleSort bubble = new BubbleSort();
+        int[] array = convertirArray();
+        bubble.bubbleSort(array);
+        //borrar
+        for (int i=0; i<array.length;i++){
+            System.out.println(array[i]);
+        }
+    }
+    private int[] convertirArray(){
+        int[] listaAux = new int[lista.len()];
+        for (int i =0; i<lista.len(); i++){
+            listaAux[i]= lista.getInfo(i);
+        }
+        return listaAux;
+    }
 }
