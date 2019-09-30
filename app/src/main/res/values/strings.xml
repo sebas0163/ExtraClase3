@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Ordenamiento</string>
+    <string name="añadirNum">Añadir Número</string>
+    <string name="Textview">Ordenamiento</string>
 </resources>
