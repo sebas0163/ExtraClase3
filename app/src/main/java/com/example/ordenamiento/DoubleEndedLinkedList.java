@@ -228,4 +228,8 @@ public class DoubleEndedLinkedList<T>{
     public Nodo<T> getLast(){
         return this.tile;
     }
+
+    public Nodo<T> getHead() {
+        return head;
+    }
 }
