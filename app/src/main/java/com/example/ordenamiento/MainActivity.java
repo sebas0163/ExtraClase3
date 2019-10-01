@@ -34,27 +34,32 @@ public class MainActivity extends AppCompatActivity {
         int[] array = convertirArray();
         bubble.bubbleSort(array);
         //borrar
-        for (int i=0; i<array.length;i++){
-            System.out.println(array[i]);
-        }
+        bubble.printArray(array);
+        //for (int i=0; i<array.length;i++){
+        //    System.out.println(array[i]);
+        //}
     }
     public void selection(View view){
         SelectionSort selection = new SelectionSort();
         int[] array = convertirArray();
         selection.select(array);
         //borrar
-        for (int i=0; i<array.length;i++) {
-            System.out.println(array[i]);
-        }
+        selection.printArray(array);
+
+        //for (int i=0; i<array.length;i++) {
+        //    System.out.println(array[i]);
+        //}
     }
     public void Insertion(View view){
         InsertionSort insertion = new InsertionSort();
         int[] array = convertirArray();
         insertion.insert(array);
         //borrar
-        for (int i=0; i<array.length;i++) {
-            System.out.println(array[i]);
-        }
+        insertion.printArray(array);
+
+        //for (int i=0; i<array.length;i++) {
+        //    System.out.println(array[i]);
+        //}
     }
     private int[] convertirArray(){
         int[] listaAux = new int[lista.len()];
