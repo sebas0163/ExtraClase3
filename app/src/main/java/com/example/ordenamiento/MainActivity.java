@@ -2,6 +2,7 @@ package com.example.ordenamiento;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         for (int i=0; i<array.length;i++){
             System.out.println(array[i]);
         }
+        Intent intent = new Intent(this, Main3Activity.class);
+        startActivity(intent);
     }
     public void selection(View view){
         SelectionSort selection = new SelectionSort();
@@ -46,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         for (int i=0; i<array.length;i++) {
             System.out.println(array[i]);
         }
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
     }
     public void Insertion(View view){
         InsertionSort insertion = new InsertionSort();
@@ -55,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
         for (int i=0; i<array.length;i++) {
             System.out.println(array[i]);
         }
+        Intent intent = new Intent(this, Main4Activity.class);
+        startActivity(intent);
     }
     private int[] convertirArray(){
         int[] listaAux = new int[lista.len()];
