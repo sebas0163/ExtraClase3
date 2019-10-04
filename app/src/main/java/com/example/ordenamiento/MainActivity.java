@@ -2,6 +2,7 @@ package com.example.ordenamiento;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -10,7 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private EditText editText1;
-    private DoubleEndedLinkedList<Integer> lista;
+    public static DoubleEndedLinkedList<Integer> lista;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this,"La lista se ha reiniciado",Toast.LENGTH_SHORT).show();
     }
     public void bubble(View view){
+<<<<<<< HEAD
         BubbleSort bubble = new BubbleSort();
         int[] array = convertirArray();
         bubble.bubbleSort(array);
@@ -67,5 +69,17 @@ public class MainActivity extends AppCompatActivity {
             listaAux[i]= lista.getInfo(i);
         }
         return listaAux;
+=======
+        Intent intent = new Intent(this, Main3Activity.class);
+        startActivity(intent);
+    }
+    public void selection(View view){
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+    public void Insertion(View view){
+        Intent intent = new Intent(this, Main4Activity.class);
+        startActivity(intent);
+>>>>>>> sebas
     }
 }
