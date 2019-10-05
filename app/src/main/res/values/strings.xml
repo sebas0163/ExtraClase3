@@ -5,4 +5,8 @@
     <string name="titulo1">Bubble</string>
     <string name="titulo2">Selection</string>
     <string name="titulo3">Insertion</string>
+    <string name="titulo4">Iteracion</string>
+    <string name="titulo5">Lista</string>
+    <string name="titulo6">Swap</string>
+    <string name="titulo7">Comparaciones</string>
 </resources>

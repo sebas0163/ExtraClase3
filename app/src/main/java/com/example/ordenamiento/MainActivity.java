@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private EditText editText1;
-    private DoubleEndedLinkedList<Integer> lista;
+    public static DoubleEndedLinkedList<Integer> lista;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     public void agragarLista(View view){
         int num = Integer.parseInt(editText1.getText().toString());
         lista.add(num);
-        lista.print();
         editText1.getText().clear();
         Toast.makeText(this,"Número añadido a la lista",Toast.LENGTH_SHORT).show();
     }
@@ -31,43 +30,15 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this,"La lista se ha reiniciado",Toast.LENGTH_SHORT).show();
     }
     public void bubble(View view){
-        BubbleSort bubble = new BubbleSort();
-        int[] array = convertirArray();
-        bubble.bubbleSort(array);
-        //borrar
-        for (int i=0; i<array.length;i++){
-            System.out.println(array[i]);
-        }
         Intent intent = new Intent(this, Main3Activity.class);
         startActivity(intent);
     }
     public void selection(View view){
-        SelectionSort selection = new SelectionSort();
-        int[] array = convertirArray();
-        selection.select(array);
-        //borrar
-        for (int i=0; i<array.length;i++) {
-            System.out.println(array[i]);
-        }
         Intent intent = new Intent(this, Main2Activity.class);
         startActivity(intent);
     }
     public void Insertion(View view){
-        InsertionSort insertion = new InsertionSort();
-        int[] array = convertirArray();
-        insertion.insert(array);
-        //borrar
-        for (int i=0; i<array.length;i++) {
-            System.out.println(array[i]);
-        }
         Intent intent = new Intent(this, Main4Activity.class);
         startActivity(intent);
-    }
-    private int[] convertirArray(){
-        int[] listaAux = new int[lista.len()];
-        for (int i =0; i<lista.len(); i++){
-            listaAux[i]= lista.getInfo(i);
-        }
-        return listaAux;
     }
 }
