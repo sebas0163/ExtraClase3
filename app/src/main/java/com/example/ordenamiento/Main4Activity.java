@@ -3,6 +3,9 @@ package com.example.ordenamiento;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 public class Main4Activity extends AppCompatActivity {
     private int swaps=0;
@@ -16,6 +19,15 @@ public class Main4Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main4);
         array = convertirArray();
         insert(array);
+        int cont=10;
+        while(cont!=0){
+        LinearLayout scroll = (LinearLayout) this.findViewById(R.id.linearL);
+        TextView tv1 = new TextView(this);
+        tv1.setText("hola");
+        System.out.println(array[0]);
+        scroll.addView(tv1);
+        cont--;
+        }
     }
     /**
      *tomado de
@@ -42,6 +54,7 @@ public class Main4Activity extends AppCompatActivity {
         return numArray;
     }
     private void mostrarIteraciones(int[] array,int iteracion,int swaps,int compara){
+
         return;
     }
     private int[] convertirArray(){

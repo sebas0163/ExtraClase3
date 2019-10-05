@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Main4Activity">
@@ -61,4 +62,25 @@
         android:text="@string/titulo7"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="144dp"
+        android:layout_height="560dp"
+        android:layout_marginTop="48dp"
+        android:scrollbarStyle="outsideInset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/linearL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
