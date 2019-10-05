@@ -12,28 +12,34 @@ public class Main4Activity extends AppCompatActivity {
     private int comp=0;
     private DoubleEndedLinkedList<Integer> lista = MainActivity.lista;
     private int[] array;
-    private int iteraciones;
+    private int iteraciones=5;
     private DoubleEndedLinkedList<String> listas=new DoubleEndedLinkedList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
+        listas.add("Iteraciones");
         array = convertirArray();
         insert(array);
+        listas.add(0,"Se realizaron: "+Integer.toString(swaps)+" Swaps");
+        listas.add(1," ");
+        listas.add(0,"Se realizaron: "+Integer.toString(comp)+" Comparaciones");
+        listas.add(1," ");
         int cont=0;
-        listas.print();
-        //while(cont<iteraciones){
-        //    LinearLayout scroll = (LinearLayout) this.findViewById(R.id.linearL);
-        //    TextView tv1 = new TextView(this);
-        //    tv1.setText("hola");
-        //    System.out.println(array[0]);
-        //    scroll.addView(tv1);
-        //
-        //    cont++;
-        //}
+
+        while(cont<iteraciones){
+            LinearLayout scroll = (LinearLayout) this.findViewById(R.id.linearL);
+            TextView tv1 = new TextView(this);
+            tv1.setText(listas.getNodo(cont).getDato());
+            scroll.addView(tv1);
+
+            cont++;
+        }
+
     }
     public void arrToStrin(int[] arr){
+        iteraciones++;
         String cadena="[";
         int largo=array.length;
         for (int x=0;x<largo;x++){
@@ -66,7 +72,8 @@ public class Main4Activity extends AppCompatActivity {
                 j = j - 1;
             }
             numArray[j + 1] = key;
-            mostrarIteraciones(numArray,itera,swaps,comp);
+            arrToStrin(array);
+           // mostrarIteraciones(numArray,itera,swaps,comp);
         }
         comp--;
         return numArray;
