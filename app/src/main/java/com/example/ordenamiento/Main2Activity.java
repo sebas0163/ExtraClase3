@@ -81,7 +81,7 @@ public class Main2Activity extends AppCompatActivity {
         swaps--;
         return numArray;
     }
-    
+
     private int[] convertirArray(){
         int[] listaAux = new int[lista.len()];
         for (int i =0; i<lista.len(); i++){
