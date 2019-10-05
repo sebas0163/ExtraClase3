@@ -77,8 +77,9 @@ public class Main2Activity extends AppCompatActivity {
             arrToStrin(array);
 
         }
-        comp++;
+        comp--;
         swaps--;
+
         return numArray;
     }
 
