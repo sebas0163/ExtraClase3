@@ -57,10 +57,8 @@ public class Main3Activity extends AppCompatActivity {
 
         int n = numArray.length;
         int temp = 0;
-        int itera=0;
         arrToStrin(numArray);
         for (int i = 0; i < n; i++) {
-            itera++;
             comp++;
             for (int j = 1; j < (n - i); j++) {
                 comp++;

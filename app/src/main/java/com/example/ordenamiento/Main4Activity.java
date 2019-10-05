@@ -58,10 +58,8 @@ public class Main4Activity extends AppCompatActivity {
      */
     public int[] insert(int[] numArray){
         int n = numArray.length;
-        int itera = 0;
         arrToStrin(numArray);
         for (int i = 1; i < n; ++i) {
-            itera++;
             comp++;
             int key = numArray[i];
             int j = i - 1;
