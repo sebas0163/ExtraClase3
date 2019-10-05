@@ -53,12 +53,10 @@ public class Main2Activity extends AppCompatActivity {
     public int[] select(int numArray[])
     {
         int n = numArray.length;
-        int itera = 0;
         arrToStrin(numArray);
         // One by one move boundary of unsorted subnumArrayay
         for (int i = 0; i < n-1; i++)
         {
-            itera++;
             int min_idx = i;
 
             for (int j = i+1; j < n; j++)

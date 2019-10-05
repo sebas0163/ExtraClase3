@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     public void agragarLista(View view){
         int num = Integer.parseInt(editText1.getText().toString());
         lista.add(num);
-        lista.print();
         editText1.getText().clear();
         Toast.makeText(this,"Número añadido a la lista",Toast.LENGTH_SHORT).show();
     }
