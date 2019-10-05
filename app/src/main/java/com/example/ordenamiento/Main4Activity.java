@@ -78,10 +78,6 @@ public class Main4Activity extends AppCompatActivity {
         comp--;
         return numArray;
     }
-    private void mostrarIteraciones(int[] array,int iteracion,int swaps,int compara){
-        arrToStrin(array);
-        return;
-    }
     private int[] convertirArray(){
         int[] listaAux = new int[lista.len()];
         for (int i =0; i<lista.len(); i++){
