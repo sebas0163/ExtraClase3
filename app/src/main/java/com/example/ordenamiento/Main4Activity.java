@@ -73,7 +73,7 @@ public class Main4Activity extends AppCompatActivity {
             }
             numArray[j + 1] = key;
             arrToStrin(array);
-           // mostrarIteraciones(numArray,itera,swaps,comp);
+
         }
         comp--;
         return numArray;
