@@ -22,7 +22,7 @@ public class Main3Activity extends AppCompatActivity {
         array = convertirArray();
         listas.add("Iteraciones");
         bubbleSort(array);
-        bubbleSort(array);
+        
         listas.add(0,"Se realizaron: "+Integer.toString(swaps)+" Swaps");
         listas.add(1," ");
         listas.add(0,"Se realizaron: "+Integer.toString(comp)+" Comparaciones");
