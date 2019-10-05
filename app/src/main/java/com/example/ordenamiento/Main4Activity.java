@@ -12,6 +12,8 @@ public class Main4Activity extends AppCompatActivity {
     private int comp=0;
     private DoubleEndedLinkedList<Integer> lista = MainActivity.lista;
     private int[] array;
+    private int iteraciones;
+    private DoubleEndedLinkedList<String> listas=new DoubleEndedLinkedList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,15 +21,30 @@ public class Main4Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main4);
         array = convertirArray();
         insert(array);
-        int cont=10;
-        while(cont!=0){
-        LinearLayout scroll = (LinearLayout) this.findViewById(R.id.linearL);
-        TextView tv1 = new TextView(this);
-        tv1.setText("hola");
-        System.out.println(array[0]);
-        scroll.addView(tv1);
-        cont--;
+        int cont=0;
+        listas.print();
+        //while(cont<iteraciones){
+        //    LinearLayout scroll = (LinearLayout) this.findViewById(R.id.linearL);
+        //    TextView tv1 = new TextView(this);
+        //    tv1.setText("hola");
+        //    System.out.println(array[0]);
+        //    scroll.addView(tv1);
+        //
+        //    cont++;
+        //}
+    }
+    public void arrToStrin(int[] arr){
+        String cadena="[";
+        int largo=array.length;
+        for (int x=0;x<largo;x++){
+            if (x==largo-1)
+                cadena += Integer.toString(array[x])+"]";
+
+            else
+                cadena += Integer.toString(array[x])+"-";
         }
+        listas.add(cadena);
+
     }
     /**
      *tomado de
@@ -36,6 +53,7 @@ public class Main4Activity extends AppCompatActivity {
     public int[] insert(int[] numArray){
         int n = numArray.length;
         int itera = 0;
+        arrToStrin(numArray);
         for (int i = 1; i < n; ++i) {
             itera++;
             comp++;
@@ -54,7 +72,7 @@ public class Main4Activity extends AppCompatActivity {
         return numArray;
     }
     private void mostrarIteraciones(int[] array,int iteracion,int swaps,int compara){
-
+        arrToStrin(array);
         return;
     }
     private int[] convertirArray(){
